@@ -63,6 +63,7 @@ c | character file | Used to communicate with hardware.
     - `head` : same as cat but you can see all the above code
     - `tail` : same as head but from below
         - `-n` : specifies number of line from above
+        
         Ex: `head -n 5 hello.txt`
     
     ### Copying File
@@ -70,6 +71,7 @@ c | character file | Used to communicate with hardware.
     - `cp` : The cp command is used to copy files. Similar to the mv command, it requires at least two arguments: a source and a destination. For example, to copy the /etc/passwd file to the current directory, use the following command: 
             `cp /etc/passwd .` (. is the incdication of current directory)
     - `dd` : The dd command is a utility for copying files or entire partitions at the bit level.
+
             `dd if=/dev/zero of=/tmp/swapex bs=1M count=50`
         Argument | Description
         --------- | -------
@@ -81,6 +83,7 @@ c | character file | Used to communicate with hardware.
     ### Moving File
 
     - `mv` : The mv command requires at least two arguments. The first argument is the source, a path to the file to be moved. The second argument is the destination, a path to where the file will be moved to. 
+
         Ex: `mv people.csv Work`
     
     ### Removing File
@@ -94,6 +97,7 @@ c | character file | Used to communicate with hardware.
 
         - REGULAR EXP
             Basic Regex Character(s) | Meaning
+            ------------------------ | ---------------
             . | Any one single character
             [ ] | Any one specified character
             [^ ] | Not the one specified character
