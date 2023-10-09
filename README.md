@@ -158,9 +158,8 @@ c | character file | Used to communicate with hardware.
         ------- | ------ | -------
         User Name | sysadmin | The name of the user.
         Password Status | P	| P indicates a usable password.
-        L indicates a locked password.
-        NP indicates no password.
-
+                              L indicates a locked password.
+                              NP indicates no password.
         Change Date | 03/01/2015 | The date when the password was last changed.
         Minimum | 0 | The minimum number of days that must pass before the current password can be changed by the user.
         Maximum | 99999 | The maximum number of days remaining for the password to expire.
