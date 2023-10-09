@@ -63,7 +63,7 @@ c | character file | Used to communicate with hardware.
     - `head` : same as cat but you can see all the above code
     - `tail` : same as head but from below
         - `-n` : specifies number of line from above
-        
+
         Ex: `head -n 5 hello.txt`
     
     ### Copying File
@@ -104,6 +104,68 @@ c | character file | Used to communicate with hardware.
             \* | Zero or more of the previous character
             ^ | If first character in the pattern, then pattern must be at beginning of the line to match, otherwise just a literal ^
             $ | If last character in the pattern, then pattern must be at the end of the line to match, otherwise just a literal $
+
+            Extended Regex Character(s) | Meaning
+            --------------------------- | ---------
+            \+ | One or more of the previous pattern
+            ? | The preceding pattern is optional
+            { } | Specify minimum, maximum or exact matches of the previous pattern
+            | | Alternation - a logical "or"
+            ( ) | Used to create groups
+
+    ### ShutDown
+
+    - `shutdown` : The shutdown command arranges for the system to be brought down in a safe way. All logged-in users are notified that the system is going down and within the last five minutes leading up to the shutdown, new logins are prevented.
+        Ex: `sudo shutdown now` (or hh::mm from the now time)
+
+    ### Network Config
+
+    - `ifconfig` : The ifconfig command stands for "interface configuration" and is used to display network configuration information.
+    - `ping` : The ping command is used to verify connectivity between two computers. It does this by sending packets to another machine on a network. If the sender receives a response it should be possible to connect to that machine.
+        Ex: `ping -c 4 192.168.1.2` (-c: specify the no of times the ping is sent)
+
+    ### Viewing Processes
+
+    - `ps` : The ps command can be used to list processes.
+        - `e` : Instead of viewing just the processes running in the current terminal, users may want to view every process running on the system. The -e option will display every process.
+        - `f` : Provide more details.
+
+    ### Package Management
+
+    Package management is a system by which software can be installed, updated, queried or removed from a filesystem. In Linux, there are many different software package management systems, but the two most popular are those from Debian and Red Hat. The virtual machines for this course use Ubuntu, a derivative of Debian.
+
+    - `apt-get update`: Updates the package list for installed packages on your system from repositories.
+
+    - `apt-get search [keyword]` : keyword present in package
+
+    - `sudo apt-get install [package]` : Install desired package
+
+    - Updating all packages of the system should be done in two steps. First, update the cache of all packages available with apt-get update. Second, execute the apt-get upgrade command and all packages and dependencies will be updated.
+        `sudo apt-get update`
+        `sudo apt-get upgrade`
+    - REMOVING
+        The apt-get command is able to either remove or purge a package. The difference between the two is that purging deletes all package files, while removing deletes all but the configuration files for the package.
+
+        An administrator can execute the apt-get remove command to remove a package or the apt-get purge command to purge a package completely from the system.
+        `sudo apt-get remove [package]`
+        `sudo apt-get purge [package]`
+
+    ### Updating User Passwords
+
+    - `passwd` : The passwd command is used to update a user’s password. Users can only change their own passwords, whereas the root user can update the password for any user.
+
+        Field | Example | Meaning
+        ------- | ------ | -------
+        User Name | sysadmin | The name of the user.
+        Password Status | P	| P indicates a usable password.
+        L indicates a locked password.
+        NP indicates no password.
+
+        Change Date | 03/01/2015 | The date when the password was last changed.
+        Minimum | 0 | The minimum number of days that must pass before the current password can be changed by the user.
+        Maximum | 99999 | The maximum number of days remaining for the password to expire.
+        Warn | 7 | The number of days prior to password expiry that the user is warned.
+        Inactive | -1 | The number of days after password expiry that the user account remains active.
 
 
     
