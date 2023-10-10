@@ -164,5 +164,7 @@ c | character file | Used to communicate with hardware.
         Warn | 7 | The number of days prior to password expiry that the user is warned.
         Inactive | -1 | The number of days after password expiry that the user account remains active.
 
+        
+
 
     
